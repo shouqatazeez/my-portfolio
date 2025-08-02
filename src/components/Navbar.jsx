@@ -17,10 +17,11 @@ import { Text } from "lucide-react";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
-  { href: "#", label: "Home", active: true },
-  { href: "#", label: "Features" },
-  { href: "#", label: "Pricing" },
+  { href: "#", label: "Home" },
   { href: "#", label: "About" },
+  { href: "#", label: "Projects" },
+  { href: "#", label: "Skills" },
+  { href: "#", label: "Contact" },
 ];
 
 function Navbar() {
