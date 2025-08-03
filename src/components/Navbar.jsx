@@ -15,7 +15,6 @@ import {
 import Devlogo from "./Devlogo";
 import { Text } from "lucide-react";
 
-// Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
   { href: "#", label: "Home" },
   { href: "#", label: "About" },
@@ -28,7 +27,6 @@ function Navbar() {
   return (
     <header className="border-b px-4 md:px-6 shadow-sm ">
       <div className="flex h-16 items-center justify-between gap-4">
-        {/* Left side: logo and mobile toggle */}
         <div className="flex items-center gap-2">
           <Popover>
             <PopoverTrigger asChild>
@@ -37,7 +35,6 @@ function Navbar() {
                 variant="ghost"
                 size="icon"
               >
-                {/* Mobile icon */}
                 <svg
                   className="pointer-events-none"
                   width={16}
@@ -84,13 +81,11 @@ function Navbar() {
             </PopoverContent>
           </Popover>
 
-          {/* Logo only */}
           <a href="#" className="text-primary hover:text-primary/90">
             <Devlogo />
           </a>
         </div>
 
-        {/* Right side: nav links + resume */}
         <div className="flex items-center gap-6">
           <NavigationMenu className="max-md:hidden">
             <NavigationMenuList className="gap-2 ">
