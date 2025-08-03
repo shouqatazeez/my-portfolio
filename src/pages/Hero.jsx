@@ -1,6 +1,5 @@
 import hero from "../assets/Heroimg.png";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { FaXTwitter, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 function Hero() {
   return (
@@ -12,54 +11,71 @@ function Hero() {
         <div className="flex flex-col justify-center md:col-span-3 md:pr-6 xl:pr-12">
           <div className="space-y-6 md:space-y-8">
             <div className="flex items-center space-x-3">
-              <span className="bg-primary h-1.5 w-1.5 rounded-full"></span>
-              <h2 className="text-primary text-sm font-semibold tracking-wider uppercase">
-                Art Director & Visual Designer
+              <span className="text-primary text-base">•</span>
+              <h2 className="text-primary text-sm font-semibold tracking-wider uppercase flex items-center space-x-2">
+                <span>Frontend Developer</span>
+                <span className="text-base">•</span>
+                <span>React & Tailwind CSS</span>
               </h2>
             </div>
 
-            <h1 className="scroll-m-20 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-              <span className="block">Creating Brands</span>
-              <span className="text-primary mt-1 block">That Resonate</span>
+            <h1 className="scroll-m-20 text-2xl font-bold tracking-tight md:text-3xl lg:text-4xl">
+              <span className="block">Hi, I'm Mohammad Shouqat Azeez</span>
+              <span className="text-primary mt-1 block">
+                Frontend Web Developer
+              </span>
             </h1>
 
             <p className="text-muted-foreground max-w-xl text-lg">
-              I specialize in transforming complex ideas into compelling visual
-              narratives. With a decade of experience in branding and visual
-              design, I help businesses build memorable identities that connect
-              with their audience.
+              I'm a frontend developer passionate about crafting responsive,
+              user-friendly web interfaces. I specialize in React, Tailwind CSS,
+              and modern UI design, with a strong focus on clean code and
+              performance.
             </p>
-
             <div className="pt-2">
-              <p className="text-muted-foreground mb-3 text-sm font-medium">
-                TRUSTED BY
-              </p>
+              <p className=" mb-3 text-sm font-medium">OPEN TO WORK</p>
               <div className="flex flex-wrap items-center gap-6">
                 <div className="text-muted-foreground/70 hover:text-foreground font-semibold transition-colors">
-                  STUDIO
+                  Internship
                 </div>
                 <div className="text-muted-foreground/70 hover:text-foreground font-semibold transition-colors">
-                  ARTLAB
+                  Freelance Projects
                 </div>
                 <div className="text-muted-foreground/70 hover:text-foreground font-semibold transition-colors">
-                  DESIGNCO
-                </div>
-                <div className="text-muted-foreground/70 hover:text-foreground font-semibold transition-colors">
-                  VISUALS+
+                  Remote Roles
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Button size="lg" className="group">
-                View Portfolio
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-
-              <Button variant="outline" size="lg" className="group">
-                Contact Me
-                <ExternalLink className="ml-2 h-4 w-4 opacity-70 transition-opacity group-hover:opacity-100" />
-              </Button>
+            <div className="flex items-center space-x-5 mt-4 text-3xl  ">
+              <a
+                href="https://github.com/shouqatazeez"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/shouqat-azeez-mohammad/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://x.com/shouqatazeez"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaXTwitter />
+              </a>
+              <a
+                href="https://www.instagram.com/__shouqat__/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />
+              </a>
             </div>
           </div>
         </div>
