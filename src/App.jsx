@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <div className="relative min-h-screen w-full bg-white">
+      <div className="relative min-h-screen w-full bg-white pt-16">
         <div
           className="absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] 
                      [background-size:16px_16px] 
