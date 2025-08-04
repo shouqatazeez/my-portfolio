@@ -25,7 +25,7 @@ const navigationLinks = [
 
 function Navbar() {
   return (
-    <header className="border-b px-4 md:px-6 shadow-sm ">
+    <header className="fixed top-0 w-full z-50 border-b bg-white px-4 md:px-6 shadow-sm">
       <div className="flex h-16 items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <Popover>
