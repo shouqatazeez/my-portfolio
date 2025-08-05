@@ -16,11 +16,11 @@ import Devlogo from "./Devlogo";
 import { Text } from "lucide-react";
 
 const navigationLinks = [
-  { href: "#", label: "Home" },
-  { href: "#", label: "About" },
-  { href: "#", label: "Projects" },
-  { href: "#", label: "Skills" },
-  { href: "#", label: "Contact" },
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#contact", label: "Contact" },
 ];
 
 function Navbar() {
