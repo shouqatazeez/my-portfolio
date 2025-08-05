@@ -3,7 +3,7 @@ import Aimg from "../assets/Aboutimg.png";
 
 const About = () => {
   return (
-    <div className="sm:flex gap-6 items-center max-w-screen-xl mx-auto px-6 py-16 md:py-20 sm:-mt-24  md:-mt-20  lg:-mt-44">
+    <div className="sm:flex gap-6 items-center max-w-screen-xl mx-auto px-6 pt-16 md:pt-20 pb-0 sm:-mt-24 md:-mt-20 lg:-mt-44">
       <div className="hidden md:block md:w-1/2">
         <div className="image object-center text-center">
           <img
