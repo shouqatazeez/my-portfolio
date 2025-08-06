@@ -13,7 +13,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import Devlogo from "./Devlogo";
-import { Text } from "lucide-react";
 
 const navigationLinks = [
   { href: "#home", label: "Home" },
@@ -104,7 +103,12 @@ function Navbar() {
           </NavigationMenu>
 
           <Button asChild size="sm" className="text-sm">
-            <a href="/resume.pdf" download className="flex items-center gap-1">
+            <a
+              href="https://drive.google.com/drive/u/0/folders/1lznp4RtLdQhR2uyySWXExvXqvlOefZB2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1"
+            >
               <FileText className="size-4" />
               <span>Resume</span>
             </a>
