@@ -20,8 +20,8 @@ const projects = [
       "A full-stack receipt management app with Supabase, image previews, and secure auth.",
     image: ReceiptPro,
     tags: ["#React.js", "#Supabase", "#Tailwind CSS", "#Authentication"],
-    liveLink: "https://receiptpro.vercel.app",
-    githubLink: "https://github.com/yourname/receiptpro",
+    liveLink: "https://receipt-organizer-bice.vercel.app/",
+    githubLink: "https://github.com/shouqatazeez/receipt-organizer.git",
   },
   {
     id: 2,
@@ -31,8 +31,8 @@ const projects = [
       "A platform to explore, upload, and manage book listings with Firebase authentication and storage.",
     image: BookNest,
     tags: ["#React.js", "#Firebase", "#React Bootstrap", "#Vercel"],
-    liveLink: "https://booknest.vercel.app",
-    githubLink: "https://github.com/yourname/booknest",
+    liveLink: "https://book-nest-hazel.vercel.app/",
+    githubLink: "https://github.com/shouqatazeez/book-nest.git",
   },
   {
     id: 3,
@@ -42,8 +42,8 @@ const projects = [
       "A fully responsive online grocery store built with HTML, CSS, and JavaScript.",
     image: Grocerystore,
     tags: ["#HTML", "#CSS", "#JavaScript", "#Responsive Design"],
-    liveLink: "https://grocerystore.netlify.app",
-    githubLink: "https://github.com/yourname/grocerystore",
+    liveLink: "https://grocery-store-gold.vercel.app/",
+    githubLink: "https://github.com/shouqatazeez/grocery-store.git",
   },
 ];
 
