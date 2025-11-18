@@ -104,7 +104,7 @@ function Navbar() {
 
           <Button asChild size="sm" className="text-sm">
             <a
-              href="https://drive.google.com/drive/u/1/folders/1lznp4RtLdQhR2uyySWXExvXqvlOefZB2"
+              href="https://drive.google.com/drive/folders/1lznp4RtLdQhR2uyySWXExvXqvlOefZB2"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1"
