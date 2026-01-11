@@ -1,6 +1,7 @@
 import ReceiptPro from "../assets/receiptpro.png";
 import BookNest from "../assets/BookNest.png";
 import Grocerystore from "../assets/Grocerystore.png";
+import DeptHub from "../assets/DeptHub.png";
 
 import { ExternalLink, Github } from "lucide-react";
 import {
@@ -14,6 +15,24 @@ import { Button } from "@/components/ui/button";
 const projects = [
   {
     id: 1,
+    title: "DeptHub",
+    category: "Frontend",
+    description:
+      "An academic notes-sharing platform for the CSE department with authentication and organized subject-wise resources.",
+    image: DeptHub,
+    tags: [
+      "#React.js",
+      "#Tailwind CSS",
+      "#Firebase",
+      "#Supabase",
+      "#Education",
+    ],
+    liveLink: "https://depthub.vercel.app/",
+    githubLink: "https://github.com/shouqatazeez/DeptHub-.git",
+  },
+
+  {
+    id: 2,
     title: "ReceiptPro",
     category: "Full Stack",
     description:
@@ -24,7 +43,7 @@ const projects = [
     githubLink: "https://github.com/shouqatazeez/receipt-organizer.git",
   },
   {
-    id: 2,
+    id: 3,
     title: "Book Nest",
     category: "Full Stack",
     description:
@@ -35,7 +54,7 @@ const projects = [
     githubLink: "https://github.com/shouqatazeez/book-nest.git",
   },
   {
-    id: 3,
+    id: 4,
     title: "Grocery Store Website",
     category: "Frontend Development",
     description:
