@@ -1,7 +1,7 @@
 import ReceiptPro from "../assets/receiptpro.png";
 import BookNest from "../assets/BookNest.png";
 import Grocerystore from "../assets/Grocerystore.png";
-import DeptHub from "../assets/Depthub.png";
+import DeptHub from "../assets/depthub.png";
 
 import { ExternalLink, Github } from "lucide-react";
 import {
