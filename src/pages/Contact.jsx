@@ -46,7 +46,7 @@ export default function ClassicContactForm() {
   };
 
   return (
-    <section className="container mx-auto px-4 py-16 md:py-24 2xl:max-w-[1400px]">
+    <section className="container mx-auto px-4 py-16 pb-12 md:py-20 md:pb-14 2xl:max-w-[1400px]">
       <div className="mb-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight inline-block section-heading">
           Contact Me

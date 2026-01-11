@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <div className="relative min-h-screen w-full bg-white pt-16 scroll-smooth">
+      <div className="relative w-full bg-white pt-16 scroll-smooth">
         <div
           className="absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] 
                      [background-size:16px_16px] 
@@ -32,9 +32,9 @@ const App = () => {
           <section id="contact">
             <Contact />
           </section>
-          <Footer />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

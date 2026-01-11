@@ -1,5 +1,6 @@
 import hero from "../assets/Heroimg.png";
 import { FaXTwitter, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { Mail } from "lucide-react";
 
 function Hero() {
   return (
@@ -92,6 +93,13 @@ function Hero() {
                 aria-label="Instagram Profile"
               >
                 <FaInstagram />
+              </a>
+              <a
+                href="mailto:mdshouqatazeez@gmail.com"
+                className="social-icon p-3 rounded-full bg-gray-100 hover:bg-green-100 text-2xl"
+                aria-label="Email"
+              >
+                <Mail />
               </a>
             </div>
           </div>

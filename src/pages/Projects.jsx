@@ -15,7 +15,7 @@ const projects = [
   {
     id: 1,
     title: "DeptHub",
-    category: "Frontend",
+    category: "Full Stack",
     description:
       "An academic notes-sharing platform for the CSE department with authentication and organized subject-wise resources.",
     image: DeptHub,
@@ -67,8 +67,8 @@ function Projects() {
             Projects
           </h2>
           <p className="text-muted-foreground mx-auto mt-8 max-w-2xl text-lg">
-            Explore my featured projects below. Each project represents my journey
-            in building real-world applications.
+            Explore my featured projects below. Each project represents my
+            journey in building real-world applications.
           </p>
         </div>
 
