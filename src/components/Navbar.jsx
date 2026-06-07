@@ -12,8 +12,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import Devlogo from "./Devlogo";
-import ThemeToggle from "./ThemeToggle";
 
 const navigationLinks = [
   { href: "#home", label: "Home" },
@@ -25,13 +23,13 @@ const navigationLinks = [
 
 function Navbar() {
   return (
-    <header className="fixed top-0 w-full z-50 border-b bg-background/80 backdrop-blur-md px-4 md:px-6 shadow-xs transition-colors duration-300">
-      <div className="flex h-16 items-center justify-between gap-4">
-        <div className="flex items-center gap-2">
+    <header className="fixed top-0 w-full z-50 border-b border-border bg-background px-4">
+      <nav className="flex h-12 items-center justify-center gap-6 max-w-3xl mx-auto w-full">
+        <div className="md:hidden absolute left-4">
           <Popover>
             <PopoverTrigger asChild>
               <Button
-                className="group size-8 md:hidden text-foreground hover:bg-accent"
+                className="group size-8 text-foreground hover:bg-accent"
                 variant="ghost"
                 size="icon"
               >
@@ -48,21 +46,21 @@ function Navbar() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                     d="M4 12L20 12"
-                     className="origin-center -translate-y-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-aria-expanded:translate-x-0 group-aria-expanded:translate-y-0 group-aria-expanded:rotate-[315deg]"
+                    d="M4 12L20 12"
+                    className="origin-center -translate-y-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-aria-expanded:translate-x-0 group-aria-expanded:translate-y-0 group-aria-expanded:rotate-[315deg]"
                   />
                   <path
-                     d="M4 12H20"
-                     className="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)] group-aria-expanded:rotate-45"
+                    d="M4 12H20"
+                    className="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)] group-aria-expanded:rotate-45"
                   />
                   <path
-                     d="M4 12H20"
-                     className="origin-center translate-y-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-aria-expanded:translate-y-0 group-aria-expanded:rotate-[135deg]"
+                    d="M4 12H20"
+                    className="origin-center translate-y-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-aria-expanded:translate-y-0 group-aria-expanded:rotate-[135deg]"
                   />
                 </svg>
               </Button>
             </PopoverTrigger>
-            <PopoverContent align="start" className="w-36 p-1 md:hidden bg-background border-border shadow-md">
+            <PopoverContent align="start" className="w-36 p-1 md:hidden bg-background border-border shadow-sm">
               <NavigationMenu className="max-w-none *:w-full">
                 <NavigationMenuList className="flex-col items-start gap-0">
                   {navigationLinks.map((link, index) => (
@@ -70,7 +68,6 @@ function Navbar() {
                       <NavigationMenuLink
                         href={link.href}
                         className="py-1.5 w-full block px-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
-                        active={link.active}
                       >
                         {link.label}
                       </NavigationMenuLink>
@@ -80,46 +77,37 @@ function Navbar() {
               </NavigationMenu>
             </PopoverContent>
           </Popover>
+        </div>
 
-          <a href="#" className="flex items-center">
-            <Devlogo />
+        <NavigationMenu className="max-md:hidden">
+          <NavigationMenuList className="gap-1">
+            {navigationLinks.map((link, index) => (
+              <NavigationMenuItem key={index}>
+                <NavigationMenuLink
+                  href={link.href}
+                  className="text-muted-foreground hover:text-foreground hover:bg-accent px-3 py-1.5 rounded-md font-medium transition-all text-xs"
+                >
+                  {link.label}
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
+
+        <div className="h-4 w-px bg-border max-md:hidden" />
+
+        <Button asChild size="sm" className="text-xs font-medium h-7 max-md:absolute max-md:right-4">
+          <a
+            href="https://drive.google.com/drive/folders/1lznp4RtLdQhR2uyySWXExvXqvlOefZB2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1"
+          >
+            <FileText className="size-3.5" />
+            <span>Resume</span>
           </a>
-        </div>
-
-        <div className="flex items-center gap-3 md:gap-4">
-          <NavigationMenu className="max-md:hidden">
-            <NavigationMenuList className="gap-2">
-              {navigationLinks.map((link, index) => (
-                <NavigationMenuItem key={index}>
-                  <NavigationMenuLink
-                    active={link.active}
-                    href={link.href}
-                    className="text-muted-foreground hover:text-foreground hover:bg-accent/50 px-3 py-1.5 rounded-md font-medium transition-all text-sm"
-                  >
-                    {link.label}
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-
-          <div className="h-6 w-px bg-border max-md:hidden" />
-          
-          <ThemeToggle />
-
-          <Button asChild size="sm" className="text-sm font-medium">
-            <a
-              href="https://drive.google.com/drive/folders/1lznp4RtLdQhR2uyySWXExvXqvlOefZB2"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1"
-            >
-              <FileText className="size-4" />
-              <span>Resume</span>
-            </a>
-          </Button>
-        </div>
-      </div>
+        </Button>
+      </nav>
     </header>
   );
 }

@@ -8,32 +8,25 @@ import Footer from "./pages/Footer";
 
 const App = () => {
   return (
-    <div>
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <Navbar />
-      <div className="relative w-full bg-background pt-16 scroll-smooth min-h-screen transition-colors duration-300">
-        <div
-          className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1.5px,transparent_1.5px)] dark:bg-[radial-gradient(#1e293b_1.5px,transparent_1.5px)] 
-                     [background-size:24px_24px] 
-                     [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)]"
-        />
-        <div className="relative z-10">
-          <section id="home">
-            <Hero />
-          </section>
-          <section id="about">
-            <About />
-          </section>
-          <section id="projects">
-            <Projects />
-          </section>
-          <section id="skills">
-            <Skills />
-          </section>
-          <section id="contact">
-            <Contact />
-          </section>
-        </div>
-      </div>
+      <main className="container mx-auto px-4 max-w-3xl pt-20 pb-12 space-y-6">
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="about" className="pt-5 border-t border-border">
+          <About />
+        </section>
+        <section id="projects" className="pt-5 border-t border-border">
+          <Projects />
+        </section>
+        <section id="skills" className="pt-5 border-t border-border">
+          <Skills />
+        </section>
+        <section id="contact" className="pt-5 border-t border-border">
+          <Contact />
+        </section>
+      </main>
       <Footer />
     </div>
   );
