@@ -81,12 +81,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-5">
+        <div className="border-t border-white/5 pt-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
-            <p className="text-gray-400 text-sm flex items-center gap-1">
-              © {currentYear} Mohammad Shouqat Azeez. Built with{" "}
-              <Heart className="h-3.5 w-3.5 text-red-500 fill-red-500 inline" />{" "}
-              using React & Tailwind CSS
+            <p className="text-gray-400 text-sm flex items-center gap-1.5 flex-wrap justify-center md:justify-start">
+              <span>© {currentYear} Mohammad Shouqat Azeez. Built with</span>
+              <Heart className="h-3.5 w-3.5 text-red-500 fill-red-500 inline animate-pulse" />
+              <span>using React, Tailwind & Shadcn UI</span>
             </p>
 
             <div className="flex items-center gap-3">
@@ -101,10 +101,10 @@ const Footer = () => {
               </a>
               <button
                 onClick={scrollToTop}
-                className="p-1.5 rounded-full bg-blue-600 hover:bg-blue-500 transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-blue-600/30"
+                className="p-2 rounded-full bg-blue-600 hover:bg-blue-500 transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-blue-600/20 cursor-pointer"
                 aria-label="Scroll to top"
               >
-                <ArrowUp className="h-3.5 w-3.5" />
+                <ArrowUp className="h-4 w-4 text-white" />
               </button>
             </div>
           </div>
