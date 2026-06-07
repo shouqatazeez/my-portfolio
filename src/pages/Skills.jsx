@@ -1,145 +1,164 @@
 import {
   Code,
   Database,
-  FileCode,
-  Github,
   Globe,
-  Palette,
+  Layout,
   Server,
+  Settings,
   Terminal,
 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { cn } from "@/lib/utils";
 
-const technicalSkills = [
-  { name: "JavaScript", proficiency: 90 },
-  { name: "TypeScript", proficiency: 85 },
-  { name: "Python", proficiency: 80 },
-  { name: "Java", proficiency: 75 },
-  { name: "C", proficiency: 70 },
-  { name: "HTML/CSS", proficiency: 95 },
-  { name: "React.js", proficiency: 90 },
-  { name: "Node.js & Express.js", proficiency: 85 },
-  { name: "Firebase", proficiency: 80 },
-  { name: "Supabase", proficiency: 75 },
+const coreProficiencies = [
+  { name: "React.js & Frontend Ecosystem", proficiency: 92 },
+  { name: "Tailwind CSS & shadcn/ui", proficiency: 95 },
+  { name: "JavaScript (ES6+) / TypeScript", proficiency: 90 },
+  { name: "Python Programming", proficiency: 85 },
+  { name: "FastAPI & Backend Services", proficiency: 80 },
+  { name: "SQL & Relational Databases (PostgreSQL)", proficiency: 82 },
+  { name: "Git & Version Control", proficiency: 88 },
+  { name: "HTML5 / CSS3", proficiency: 95 },
 ];
 
-const tools = [
+const skillsByCategory = [
+  {
+    category: "Programming",
+    icon: <Code className="h-5 w-5 text-blue-500" />,
+    skills: ["JavaScript", "Python", "HTML5/CSS3", "SQL", "Java"],
+  },
   {
     category: "Frontend",
-    icon: <Globe className="h-5 w-5 text-blue-500" />,
-    items: [
-      { name: "React.js", icon: <Code className="h-4 w-4" /> },
-      { name: "Tailwind CSS", icon: <Palette className="h-4 w-4" /> },
-      { name: "HTML/CSS", icon: <FileCode className="h-4 w-4" /> },
-      { name: "JavaScript", icon: <FileCode className="h-4 w-4" /> },
-      { name: "TypeScript", icon: <FileCode className="h-4 w-4" /> },
+    icon: <Layout className="h-5 w-5 text-indigo-500" />,
+    skills: [
+      "React.js",
+      "Tailwind CSS",
+      "React Router",
+      "shadcn/ui",
+      "React Hook Form",
+      "Zod",
+      "Framer Motion",
+      "Recharts",
+      "React Bootstrap",
     ],
   },
   {
     category: "Backend",
-    icon: <Server className="h-5 w-5 text-green-500" />,
-    items: [
-      { name: "Node.js", icon: <Server className="h-4 w-4" /> },
-      { name: "Express.js", icon: <Server className="h-4 w-4" /> },
-      { name: "Firebase", icon: <Database className="h-4 w-4" /> },
-      { name: "Supabase", icon: <Database className="h-4 w-4" /> },
-      { name: "REST API", icon: <Globe className="h-4 w-4" /> },
+    icon: <Server className="h-5 w-5 text-emerald-500" />,
+    skills: ["FastAPI", "SQLAlchemy", "Pydantic", "JWT Authentication"],
+  },
+  {
+    category: "Databases & Storage",
+    icon: <Database className="h-5 w-5 text-amber-500" />,
+    skills: [
+      "PostgreSQL",
+      "SQLite",
+      "Firebase Authentication",
+      "Firestore",
+      "Supabase",
+      "Supabase Storage",
+      "Cloudinary",
     ],
   },
   {
-    category: "Deployment & Tools",
-    icon: <Terminal className="h-5 w-5 text-purple-500" />,
-    items: [
-      { name: "Git & GitHub", icon: <Github className="h-4 w-4" /> },
-      { name: "AWS (Basics)", icon: <Server className="h-4 w-4" /> },
-      { name: "Netlify", icon: <Globe className="h-4 w-4" /> },
-      { name: "Vercel", icon: <Globe className="h-4 w-4" /> },
-      { name: "VS Code", icon: <Terminal className="h-4 w-4" /> },
-      { name: "Postman", icon: <Terminal className="h-4 w-4" /> },
-      { name: "Linux (Basics)", icon: <Terminal className="h-4 w-4" /> },
+    category: "Deployment & Cloud",
+    icon: <Globe className="h-5 w-5 text-rose-500" />,
+    skills: ["Vercel"],
+  },
+  {
+    category: "Tools",
+    icon: <Settings className="h-5 w-5 text-purple-500" />,
+    skills: [
+      "Git",
+      "GitHub",
+      "Vite",
+      "NPM",
+      "Postman",
+      "Swagger UI",
+      "ReDoc",
+      "ESLint",
     ],
   },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-16 md:py-24 px-6 max-w-screen-xl mx-auto">
+    <section id="skills" className="py-16 md:py-24 px-4 container mx-auto 2xl:max-w-[1400px]">
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 inline-block section-heading">
           Skills
         </h2>
         <p className="text-muted-foreground mx-auto mt-8 max-w-2xl text-lg">
-          A quick look at my core technical skills, proficiency levels, and the
-          tools I use to build fast, modern web applications.
+          My technical expertise and toolsets categorized by core competency areas, 
+          built on hands-on full-stack development experience.
         </p>
       </div>
 
-      <Tabs defaultValue="technical" className="w-full">
-        <TabsList className="flex justify-center mb-10 bg-gray-100/80 p-1.5 rounded-xl">
-          <TabsTrigger
-            value="technical"
-            className="px-6 py-2.5 rounded-lg font-medium data-[state=active]:bg-white data-[state=active]:shadow-sm"
-          >
-            Technical Skills
-          </TabsTrigger>
-          <TabsTrigger
-            value="tools"
-            className="px-6 py-2.5 rounded-lg font-medium data-[state=active]:bg-white data-[state=active]:shadow-sm"
-          >
-            Tools & Platforms
-          </TabsTrigger>
-        </TabsList>
+      <Tabs defaultValue="categories" className="w-full">
+        <div className="flex justify-center mb-10">
+          <TabsList className="bg-muted/80 p-1.5 rounded-xl border border-border/40 backdrop-blur-md">
+            <TabsTrigger
+              value="categories"
+              className="px-6 py-2 rounded-lg font-medium text-sm data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-xs"
+            >
+              Skills By Category
+            </TabsTrigger>
+            <TabsTrigger
+              value="proficiency"
+              className="px-6 py-2 rounded-lg font-medium text-sm data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-xs"
+            >
+              Core Proficiency
+            </TabsTrigger>
+          </TabsList>
+        </div>
 
-        <TabsContent value="technical" className="animate-fade-in-up">
-          <div className="grid sm:grid-cols-2 gap-6">
-            {technicalSkills.map((skill, index) => (
+        {/* Categories Tab */}
+        <TabsContent value="categories" className="animate-fade-in-up outline-none">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {skillsByCategory.map((group) => (
               <div
-                key={skill.name}
-                className="p-4 rounded-xl bg-white/50 border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all duration-300"
-                style={{ animationDelay: `${index * 50}ms` }}
+                key={group.category}
+                className="p-6 rounded-xl bg-card/60 border border-border/80 hover:border-blue-500/20 hover:shadow-xs transition-all duration-300 flex flex-col"
               >
-                <div className="flex justify-between mb-2">
-                  <span className="text-sm font-semibold text-gray-700">{skill.name}</span>
-                  <span className="text-sm font-medium text-blue-600">
-                    {skill.proficiency}%
-                  </span>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-muted border border-border/30">
+                    {group.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">{group.category}</h3>
                 </div>
-                <Progress value={skill.proficiency} className="h-2" />
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {group.skills.map((skill) => (
+                    <Badge
+                      key={skill}
+                      variant="secondary"
+                      className="flex items-center gap-1.5 px-3 py-1.5 text-xs border border-border/40 bg-muted hover:bg-blue-500/5 hover:border-blue-500/30 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 cursor-default skill-tag"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </TabsContent>
 
-        <TabsContent value="tools" className="animate-fade-in-up">
-          <div className="space-y-8">
-            {tools.map((group) => (
+        {/* Proficiency Tab */}
+        <TabsContent value="proficiency" className="animate-fade-in-up outline-none">
+          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {coreProficiencies.map((skill, index) => (
               <div
-                key={group.category}
-                className="p-6 rounded-xl bg-white/50 border border-gray-100 hover:border-gray-200 transition-all duration-300"
+                key={skill.name}
+                className="p-5 rounded-xl bg-card/60 border border-border/80 hover:border-blue-500/20 hover:shadow-xs transition-all duration-300"
+                style={{ animationDelay: `${index * 50}ms` }}
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-gray-100">
-                    {group.icon}
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-800">{group.category}</h3>
+                <div className="flex justify-between mb-2">
+                  <span className="text-sm font-semibold text-foreground">{skill.name}</span>
+                  <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
+                    {skill.proficiency}%
+                  </span>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {group.items.map((tool) => (
-                    <Badge
-                      key={tool.name}
-                      variant="outline"
-                      className={cn(
-                        "flex items-center gap-2 px-4 py-2 text-sm border-gray-200 bg-white hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition-all duration-200 cursor-default skill-tag"
-                      )}
-                    >
-                      {tool.icon}
-                      {tool.name}
-                    </Badge>
-                  ))}
-                </div>
+                <Progress value={skill.proficiency} className="h-2 bg-muted [&>[data-slot='progress-indicator']]:bg-blue-600" />
               </div>
             ))}
           </div>
