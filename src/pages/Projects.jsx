@@ -1,16 +1,76 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
+// const projects = [
+//   {
+//     id: 1,
+//     title: "HireTrack",
+//     description: [
+//       "A full-stack job application tracker using React.js, FastAPI, and PostgreSQL to replace spreadsheets with a centralized search dashboard.",
+//       "Implemented secure user registration and login with JWT authentication, password hashing, and user-specific data isolation.",
+//       "Designed a responsive dashboard using Tailwind CSS and shadcn/ui with real-time analytics, status breakdowns, and search/filtering.",
+//     ],
+//     tags: ["React.js", "FastAPI", "PostgreSQL", "Tailwind CSS", "shadcn/ui", "JWT Auth"],
+//     liveLink: "https://myhiretrack.vercel.app",
+//     githubLink: "https://github.com/shouqatazeez/HireTrack",
+//   },
+//   {
+//     id: 2,
+//     title: "DeptHub",
+//     description: [
+//       "Built a full-stack academic resource sharing platform using React, Firebase Auth, and Supabase.",
+//       "Implemented role-based access control with separate dashboards for Students, Faculty, and Admin using protected routes.",
+//       "Designed a responsive UI using Tailwind CSS with resource upload/download, search functionality, and mobile-optimized layouts.",
+//     ],
+//     tags: ["React.js", "Firebase Auth", "Supabase", "Tailwind CSS"],
+//     liveLink: "https://depthub.vercel.app/",
+//     githubLink: "https://github.com/shouqatazeez/DeptHub-.git",
+//   },
+//   {
+//     id: 3,
+//     title: "ReceiptPro",
+//     description: [
+//       "Built a responsive receipt management app using React and Tailwind CSS with reusable UI components.",
+//       "Implemented Supabase Authentication, CRUD operations, and advanced search & filtering.",
+//       "Added detailed receipt views with image preview, editable notes, and deletion workflow (mobile optimized).",
+//     ],
+//     tags: ["React.js", "Supabase Auth", "Tailwind CSS", "CRUD"],
+//     liveLink: "https://receipt-organizer-bice.vercel.app/",
+//     githubLink: "https://github.com/shouqatazeez/receipt-organizer.git",
+//   },
+//   {
+//     id: 4,
+//     title: "Grocery Store Website",
+//     description: [
+//       "Designed a responsive grocery store UI using HTML, CSS, and JavaScript.",
+//       "Built interactive product sections and smooth navigation.",
+//       "Ensured consistent mobile and desktop layouts with clean frontend structure.",
+//     ],
+//     tags: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+//     liveLink: "https://grocery-store-gold.vercel.app/",
+//     githubLink: "https://github.com/shouqatazeez/grocery-store.git",
+//   },
+// ];
+
 const projects = [
   {
     id: 1,
     title: "HireTrack",
     description: [
-      "A full-stack job application tracker using React.js, FastAPI, and PostgreSQL to replace spreadsheets with a centralized search dashboard.",
-      "Implemented secure user registration and login with JWT authentication, password hashing, and user-specific data isolation.",
-      "Designed a responsive dashboard using Tailwind CSS and shadcn/ui with real-time analytics, status breakdowns, and search/filtering.",
+      "Built an AI-powered job application tracking platform using React 19, FastAPI, PostgreSQL (Neon), and Google Gemini AI.",
+      "Engineered a secure REST API with JWT authentication, bcrypt password hashing, and strict user-scoped database isolation.",
+      "Integrated AI-powered resume analysis, job-match scoring, personalized cover letter generation, and interview coaching with detailed feedback.",
+      "Developed a real-time analytics dashboard featuring application pipelines, activity tracking, interview scheduling, and Google Calendar integration.",
+      "Implemented PDF resume parsing, CSV export, drag-and-drop uploads, and advanced search/filtering for efficient job management.",
     ],
-    tags: ["React.js", "FastAPI", "PostgreSQL", "Tailwind CSS", "shadcn/ui", "JWT Auth"],
+    tags: [
+      "React 19",
+      "FastAPI",
+      "PostgreSQL",
+      "Google Gemini AI",
+      "JWT Auth",
+      "Tailwind CSS",
+    ],
     liveLink: "https://myhiretrack.vercel.app",
     githubLink: "https://github.com/shouqatazeez/HireTrack",
   },
@@ -18,11 +78,17 @@ const projects = [
     id: 2,
     title: "DeptHub",
     description: [
-      "Built a full-stack academic resource sharing platform using React, Firebase Auth, and Supabase.",
-      "Implemented role-based access control with separate dashboards for Students, Faculty, and Admin using protected routes.",
-      "Designed a responsive UI using Tailwind CSS with resource upload/download, search functionality, and mobile-optimized layouts.",
+      "Built a role-based academic resource sharing platform using React, Firebase Authentication, and Supabase.",
+      "Implemented role-based access control (RBAC) with dedicated dashboards and permissions for Students, Faculty, and Administrators.",
+      "Developed document upload, search indexing, and secure asset delivery workflows with responsive cross-device support.",
     ],
-    tags: ["React.js", "Firebase Auth", "Supabase", "Tailwind CSS"],
+    tags: [
+      "React.js",
+      "Firebase Auth",
+      "Supabase",
+      "Tailwind CSS",
+      "RBAC",
+    ],
     liveLink: "https://depthub.vercel.app/",
     githubLink: "https://github.com/shouqatazeez/DeptHub-.git",
   },
@@ -30,28 +96,21 @@ const projects = [
     id: 3,
     title: "ReceiptPro",
     description: [
-      "Built a responsive receipt management app using React and Tailwind CSS with reusable UI components.",
-      "Implemented Supabase Authentication, CRUD operations, and advanced search & filtering.",
-      "Added detailed receipt views with image preview, editable notes, and deletion workflow (mobile optimized).",
+      "Built a receipt management platform using React, Tailwind CSS, and Supabase.",
+      "Implemented authentication, receipt uploads, CRUD operations, and advanced search/filtering capabilities.",
+      "Developed receipt inspection tools with metadata editing, image previews, custom tags, and responsive layouts.",
     ],
-    tags: ["React.js", "Supabase Auth", "Tailwind CSS", "CRUD"],
+    tags: [
+      "React.js",
+      "Supabase",
+      "Tailwind CSS",
+      "CRUD",
+      "PostgreSQL",
+    ],
     liveLink: "https://receipt-organizer-bice.vercel.app/",
     githubLink: "https://github.com/shouqatazeez/receipt-organizer.git",
   },
-  {
-    id: 4,
-    title: "Grocery Store Website",
-    description: [
-      "Designed a responsive grocery store UI using HTML, CSS, and JavaScript.",
-      "Built interactive product sections and smooth navigation.",
-      "Ensured consistent mobile and desktop layouts with clean frontend structure.",
-    ],
-    tags: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-    liveLink: "https://grocery-store-gold.vercel.app/",
-    githubLink: "https://github.com/shouqatazeez/grocery-store.git",
-  },
 ];
-
 function Projects() {
   return (
     <div className="space-y-5">

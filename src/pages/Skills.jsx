@@ -1,20 +1,65 @@
+// const primarySkills = [
+//   {
+//     category: "FRONTEND",
+//     skills: ["JavaScript", "React.js", "Tailwind CSS", "React Router", "shadcn/ui"],
+//   },
+//   {
+//     category: "BACKEND",
+//     skills: ["Python", "FastAPI", "SQLAlchemy", "JWT Authentication"],
+//   },
+//   {
+//     category: "DATABASES",
+//     skills: ["PostgreSQL", "Firebase", "Supabase", "SQLite"],
+//   },
+//   {
+//     category: "TOOLS",
+//     skills: ["Git", "GitHub", "Postman", "Vite", "ESLint"],
+//   },
+// ];
+
 const primarySkills = [
-  {
-    category: "FRONTEND",
-    skills: ["JavaScript", "React.js", "Tailwind CSS", "React Router", "shadcn/ui"],
-  },
-  {
-    category: "BACKEND",
-    skills: ["Python", "FastAPI", "SQLAlchemy", "JWT Authentication"],
-  },
-  {
-    category: "DATABASES",
-    skills: ["PostgreSQL", "Firebase", "Supabase", "SQLite"],
-  },
-  {
-    category: "TOOLS",
-    skills: ["Git", "GitHub", "Postman", "Vite", "ESLint"],
-  },
+{
+category: "FRONTEND",
+skills: [
+"JavaScript",
+"React.js",
+"Tailwind CSS",
+"React Router",
+"shadcn/ui",
+"Framer Motion",
+"Recharts",
+],
+},
+{
+category: "BACKEND",
+skills: [
+"Python",
+"FastAPI",
+"SQLAlchemy",
+"JWT Authentication",
+"REST API Design",
+"Google Gemini AI",
+],
+},
+{
+category: "DATABASES",
+skills: [
+"PostgreSQL",
+"Neon",
+"Firebase",
+"Supabase",
+"Cloudinary",
+],
+},
+{
+category: "TOOLS",
+skills: [
+"Git",
+"GitHub",
+"Postman",
+"Vercel",
+],
+},
 ];
 
 const Skills = () => {
