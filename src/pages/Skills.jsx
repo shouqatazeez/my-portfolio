@@ -1,21 +1,4 @@
-// const primarySkills = [
-//   {
-//     category: "FRONTEND",
-//     skills: ["JavaScript", "React.js", "Tailwind CSS", "React Router", "shadcn/ui"],
-//   },
-//   {
-//     category: "BACKEND",
-//     skills: ["Python", "FastAPI", "SQLAlchemy", "JWT Authentication"],
-//   },
-//   {
-//     category: "DATABASES",
-//     skills: ["PostgreSQL", "Firebase", "Supabase", "SQLite"],
-//   },
-//   {
-//     category: "TOOLS",
-//     skills: ["Git", "GitHub", "Postman", "Vite", "ESLint"],
-//   },
-// ];
+
 
 const primarySkills = [
 {
@@ -58,6 +41,8 @@ skills: [
 "GitHub",
 "Postman",
 "Vercel",
+"VS Code",
+
 ],
 },
 ];
