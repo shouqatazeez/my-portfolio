@@ -1,12 +1,22 @@
 const primarySkills = [
   {
-    category: "FRONTEND",
+    category: "LANGUAGES",
     skills: [
       "JavaScript",
+      "TypeScript",
+      "Python",
+      "SQL",
+      "Java",
+      "C",
+    ],
+  },
+  {
+    category: "FRONTEND",
+    skills: [
       "React.js",
+      "Next.js",
       "Tailwind CSS",
-      "React Router",
-      "shadcn/ui",
+      "Shadcn/UI",
       "Framer Motion",
       "Recharts",
     ],
@@ -14,26 +24,25 @@ const primarySkills = [
   {
     category: "BACKEND",
     skills: [
-      "Python",
+      "Next.js API Routes",
       "FastAPI",
+      "Prisma",
       "SQLAlchemy",
       "JWT Authentication",
-      "REST API Design",
-      "Google Gemini AI",
     ],
   },
   {
-    category: "DATABASES",
+    category: "DATABASES & STORAGE",
     skills: [
       "PostgreSQL",
       "Neon",
-      "Firebase",
       "Supabase",
+      "Firebase",
       "Cloudinary",
     ],
   },
   {
-    category: "TOOLS",
+    category: "TOOLS & PLATFORMS",
     skills: [
       "Git",
       "GitHub",
@@ -51,7 +60,7 @@ const Skills = () => {
         Skills
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
         {primarySkills.map((group) => (
           <div key={group.category} className="space-y-4">
             <h3 className="text-xs font-bold text-muted-foreground tracking-widest">
