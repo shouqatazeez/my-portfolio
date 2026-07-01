@@ -1,8 +1,6 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
-
-
 const projects = [
   {
     id: 1,
@@ -28,29 +26,32 @@ const projects = [
   },
   {
     id: 2,
-    title: "DeptHub",
+    title: "InvoTrack",
     description: [
-      "Built a role-based academic resource sharing platform using React, Firebase Authentication, and Supabase.",
-      "Implemented role-based access control (RBAC) with dedicated dashboards and permissions for Students, Faculty, and Administrators.",
-      "Developed document upload, search indexing, and secure asset delivery workflows with responsive cross-device support.",
+      "Built a full-stack multi-tenant invoice management platform using Next.js 16, Prisma 7, and PostgreSQL (Neon).",
+      "Implemented dynamic invoice builder with auto-calculated subtotals, configurable tax, and flat discount.",
+      "Engineered server-side PDF generation with branded layout, itemized tables, and status badges using jsPDF.",
+      "Developed analytics dashboard with revenue tracking, unpaid/overdue amounts, and Recharts visualizations.",
+      "Designed a complete REST API (v1) with CRUD for customers, products, and invoices, plus JWT-based multi-tenant data isolation via middleware.",
     ],
     tags: [
-      "React.js",
-      "Firebase Auth",
-      "Supabase",
+      "Next.js 16",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "NextAuth",
       "Tailwind CSS",
-      "RBAC",
     ],
-    liveLink: "https://depthub.vercel.app/",
-    githubLink: "https://github.com/shouqatazeez/DeptHub-.git",
+    liveLink: "https://myinvotrack.vercel.app/",
+    githubLink: "https://github.com/shouqatazeez/mini-invoice-app",
   },
   {
     id: 3,
     title: "ReceiptPro",
     description: [
       "Built a receipt management platform using React, Tailwind CSS, and Supabase.",
-      "Implemented authentication, receipt uploads, CRUD operations, and advanced search/filtering capabilities.",
-      "Developed receipt inspection tools with metadata editing, image previews, custom tags, and responsive layouts.",
+      "Implemented authentication, CRUD operations, and advanced search/filtering capabilities.",
+      "Developed receipt inspection tools with metadata editing, image previews, and responsive layouts.",
     ],
     tags: [
       "React.js",
@@ -62,7 +63,26 @@ const projects = [
     liveLink: "https://receipt-organizer-bice.vercel.app/",
     githubLink: "https://github.com/shouqatazeez/receipt-organizer.git",
   },
+  {
+    id: 4,
+    title: "DeptHub",
+    description: [
+      "Built a role-based academic resource sharing platform using React, Firebase Auth, and Supabase.",
+      "Implemented RBAC with dedicated dashboards for Students, Faculty, and Administrators.",
+      "Developed document upload, search indexing, and secure asset delivery with cross-device support.",
+    ],
+    tags: [
+      "React.js",
+      "Firebase Auth",
+      "Supabase",
+      "Tailwind CSS",
+      "RBAC",
+    ],
+    liveLink: "https://depthub.vercel.app/",
+    githubLink: "https://github.com/shouqatazeez/DeptHub-.git",
+  },
 ];
+
 function Projects() {
   return (
     <div className="space-y-5">
