@@ -20,13 +20,9 @@ function Hero() {
         </div>
       </div>
 
-      {/* <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
-        Building clean, responsive web applications with React and Tailwind CSS on the frontend, 
-        FastAPI and PostgreSQL on the backend, and shipping full-stack solutions that solve real problems.
-      </p> */}
       <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
-  Building scalable full-stack applications with React, FastAPI, and PostgreSQL, integrating AI-powered features, secure APIs, and intuitive user experiences to solve real-world problems.
-</p>
+        Building scalable full-stack applications with React, Next.js, FastAPI, and PostgreSQL, integrating AI-powered features, secure APIs, and intuitive user experiences to solve real-world problems.
+      </p>
 
       <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted-foreground">
         <a href="tel:+916305755345" className="flex items-center gap-1.5 hover:text-foreground transition-colors">
