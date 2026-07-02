@@ -63,24 +63,7 @@ const projects = [
     liveLink: "https://receipt-organizer-bice.vercel.app/",
     githubLink: "https://github.com/shouqatazeez/receipt-organizer.git",
   },
-  {
-    id: 4,
-    title: "DeptHub",
-    description: [
-      "Built a role-based academic resource sharing platform using React, Firebase Auth, and Supabase.",
-      "Implemented RBAC with dedicated dashboards for Students, Faculty, and Administrators.",
-      "Developed document upload, search indexing, and secure asset delivery with cross-device support.",
-    ],
-    tags: [
-      "React.js",
-      "Firebase Auth",
-      "Supabase",
-      "Tailwind CSS",
-      "RBAC",
-    ],
-    liveLink: "https://depthub.vercel.app/",
-    githubLink: "https://github.com/shouqatazeez/DeptHub-.git",
-  },
+  
 ];
 
 function Projects() {
