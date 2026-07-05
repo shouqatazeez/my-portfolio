@@ -5,13 +5,11 @@ const projects = [
   {
     id: 1,
     title: "HireTrack",
+    subtitle: "AI-Powered Job Tracker",
     description: [
-      "Built an AI-powered job application tracking platform using React 19, FastAPI, PostgreSQL (Neon), and Google Gemini AI.",
-      "Engineered a secure REST API with JWT authentication, bcrypt password hashing, and strict user-scoped database isolation.",
-      "Integrated AI-powered resume analysis, job-match scoring, personalized cover letter generation, and interview coaching with detailed feedback.",
-      "Built an AI Referral Message Generator that produces personalized Email/DM outreach and LinkedIn connection notes, tailored to the user's resume and target job description.",
-      "Developed a real-time analytics dashboard featuring application pipelines, activity tracking, interview scheduling, and Google Calendar integration.",
-      "Implemented PDF resume parsing, CSV export, drag-and-drop uploads, and advanced search/filtering for efficient job management.",
+      "Built a full-stack job application tracker using React 19, FastAPI, PostgreSQL, and Google Gemini AI enabling users to manage applications, generate tailored cover letters, and prepare for interviews with AI-driven match scoring and structured feedback.",
+      "Engineered secure REST APIs with JWT authentication, bcrypt hashing, and user-scoped database isolation; developed a real-time analytics dashboard with 7-day activity charts, status pipelines, and Google Calendar integration for interview reminders.",
+      "Implemented an AI referral message generator that produces personalized Email/DM outreach and LinkedIn connection notes based on the user's resume and target job, along with PDF resume parsing, CSV export, and client-side search using shadcn/ui components.",
     ],
     tags: [
       "React 19",
@@ -27,12 +25,11 @@ const projects = [
   {
     id: 2,
     title: "InvoTrack",
+    subtitle: "Invoice Management System",
     description: [
-      "Built a full-stack multi-tenant invoice management platform using Next.js 16, Prisma 7, and PostgreSQL (Neon).",
-      "Implemented dynamic invoice builder with auto-calculated subtotals, configurable tax, and flat discount.",
-      "Engineered server-side PDF generation with branded layout, itemized tables, and status badges using jsPDF.",
-      "Developed analytics dashboard with revenue tracking, unpaid/overdue amounts, and Recharts visualizations.",
-      "Designed a complete REST API (v1) with CRUD for customers, products, and invoices, plus JWT-based multi-tenant data isolation via middleware.",
+      "Built a full-stack invoice management system using Next.js 16, TypeScript, Prisma 7, and PostgreSQL with customer/product CRUD, multi-line item invoice creation, automatic GST/tax calculation, discount handling, and CSV export with search/filter by status.",
+      "Implemented server-side PDF generation using jsPDF with branded layout, sequential invoice numbering (INV-001), status lifecycle management (UNPAID/PAID/OVERDUE), and integrated Google Gemini AI to generate personalized payment reminder messages with one-click send via WhatsApp and Resend email API.",
+      "Engineered multi-tenant data isolation using userId-scoped queries, JWT session management via NextAuth, route-level middleware protection, and a revenue analytics dashboard with status breakdown charts, responsive shadcn/ui components, and dark/light theme support.",
     ],
     tags: [
       "Next.js 16",
@@ -40,6 +37,7 @@ const projects = [
       "Prisma",
       "PostgreSQL",
       "NextAuth",
+      "Google Gemini AI",
       "Tailwind CSS",
     ],
     liveLink: "https://myinvotrack.vercel.app/",
@@ -48,22 +46,21 @@ const projects = [
   {
     id: 3,
     title: "ReceiptPro",
+    subtitle: "Receipt Management Vault",
     description: [
-      "Built a receipt management platform using React, Tailwind CSS, and Supabase.",
-      "Implemented authentication, CRUD operations, and advanced search/filtering capabilities.",
-      "Developed receipt inspection tools with metadata editing, image previews, and responsive layouts.",
+      "Built a receipt management platform using React, Tailwind CSS, and Supabase with image uploads (JPEG/PNG), full CRUD operations, and PostgreSQL filtering by amount, date range, merchant, and custom tags.",
+      "Developed receipt detail modal with image preview, inline editing of merchant name, amount, date, category, tags, and notes for quick record management.",
+      "Implemented secure authentication with Supabase Auth including email verification, and built a responsive gallery view with grid toggle, search, and category-based filtering.",
     ],
     tags: [
       "React.js",
       "Supabase",
       "Tailwind CSS",
-      "CRUD",
       "PostgreSQL",
     ],
     liveLink: "https://receipt-organizer-bice.vercel.app/",
     githubLink: "https://github.com/shouqatazeez/receipt-organizer.git",
   },
-  
 ];
 
 function Projects() {
@@ -79,6 +76,9 @@ function Projects() {
             <div className="flex items-center gap-3 flex-wrap">
               <h3 className="font-semibold text-foreground text-lg">
                 {project.title}
+                <span className="text-muted-foreground font-normal text-sm ml-2">
+                  – {project.subtitle}
+                </span>
               </h3>
               <div className="flex items-center gap-2">
                 {project.liveLink && (
